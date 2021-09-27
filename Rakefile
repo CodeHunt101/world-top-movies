@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'sinatra/activerecord/rake'
+require_relative 'lib/world_top_movies.rb'
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
