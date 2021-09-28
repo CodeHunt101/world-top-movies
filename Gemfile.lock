@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    world_top_movies (0.1.0)
+    world_top_movies (0.1.4)
       activerecord (~> 5.2)
       artii
       colorize (~> 0.8.1)
