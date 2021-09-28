@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the following code and enjoy:
+
+```ruby
+WorldTopMovies::CLI.new.run
+```
 
 ## Development
 

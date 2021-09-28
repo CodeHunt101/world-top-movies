@@ -23,12 +23,12 @@ class WorldTopMovies::CLI
     # Introduces the app and ask for user credentials
     artii = Artii::Base.new({})
     puts "-----------------------------------------------------------------------------------"
-    puts artii.asciify("World Top Movies!")
+    puts artii.asciify("World's Top Movies!")
     puts "-----------------------------------------------------------------------------------"
     puts "    By Harold Torres Marino | p: +61 401 927 123 | e: haroldtm55@gmail.com".colorize(:mode => :italic)
     puts "-----------------------------------------------------------------------------------"
     sleep(0.5)
-    puts "\nWelcome to the World Top Movies of all times, a place where you can look up for worldwide top rated movies!\n\n"
+    puts "\nWelcome to the World's Top Movies of all times, a place where you can look up for worldwide top rated movies!\n\n"
     sleep(1.5)
     username = self.class.prompt.ask("Please enter your username to log in or sign up: ") do |q|
       q.required(true, "Oops, seems you haven't provided your username! Try again please.")
