@@ -25,6 +25,7 @@ Or install it yourself as:
 Run the following code and enjoy:
 
 ```ruby
+require 'world_top_movies'
 WorldTopMovies::CLI.new.run
 ```
 
