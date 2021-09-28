@@ -52,7 +52,7 @@ class WorldTopMovies::Movie
   end
 
   def self.all_titles_and_links_hash
-    # returns a hash with key=title, value=url of all movie instances
+    # Returns a hash with key=title, value=url of all movie instances
     result = {}
     self.all.each do |m|
       result[m.title] = m.url
@@ -61,7 +61,7 @@ class WorldTopMovies::Movie
   end
 
   def self.all_titles_and_links_hash_by_genre(genre)
-    # returns a hash with key=title, value=url of all movie instances from given genre
+    # Returns a hash with key=title, value=url of all movie instances from given genre
     result = {}
     counter = 1
     self.all_by_genre(genre).each do |m|

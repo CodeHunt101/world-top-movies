@@ -110,7 +110,7 @@ class WorldTopMovies::CLI
     sleep(0.5)
     puts ""
     movie_url = self.class.prompt.select(
-      "Select a movie: ", WorldTopMovies::Movie.all_titles_and_links_hash_by_genre(self.genre), enum: ")"
+      "Select a movie: ", WorldTopMovies::Movie.all_titles_and_links_hash_by_genre(self.genre), enum: ")",
     )
     self.movie_instance = WorldTopMovies::Movie.find_by_url(movie_url)
     self.movie_instance.scrape_and_print_movie
@@ -153,7 +153,6 @@ class WorldTopMovies::CLI
   def add_favourite_movie
     # Finds or creates a new Favourite movie instance and adds it to the database
     sleep(0.5)
-    # add_to_favourite = self.class.prompt.yes?("\nWould you like to add this movie to your favourites?")
     if self.class.user.movies.none? { |m| m.url == self.movie_instance.url }
       WorldTopMovies::DB::Movie.add_movies(user: self.class.user, movie_urls: self.movie_instance.url)
       puts "\n#{self.movie_instance.title} has been added to your favourite movies!"
@@ -194,9 +193,8 @@ class WorldTopMovies::CLI
       puts "\nOops, you haven't favourited any movies yet!!"
     else
       puts ""
-      
       movie_url = self.class.prompt.select(
-        "Select a movie: ", self.class.user.favourite_movie_titles, enum: ")"
+        "Select a movie: ", self.class.user.favourite_movie_titles, enum: ")",
       )
       WorldTopMovies::DB::Movie.all.find { |m| m.url == movie_url }.print_movie_details
     end
@@ -264,7 +262,7 @@ class WorldTopMovies::CLI
     else
       puts ""
       movie_url = self.class.prompt.select(
-        "Select a movie: ", self.class.user.movies_with_notes_titles, enum: ")"
+        "Select a movie: ", self.class.user.movies_with_notes_titles, enum: ")",
       )
       WorldTopMovies::DB::Movie.all.find { |m| m.url == movie_url }.print_movie_details
     end
