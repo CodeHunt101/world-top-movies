@@ -28,7 +28,7 @@ class WorldTopMovies::CLI
     puts "    By Harold Torres Marino | p: +61 401 927 123 | e: haroldtm55@gmail.com".colorize(:mode => :italic)
     puts "-----------------------------------------------------------------------------------"
     sleep(0.5)
-    puts "\nWelcome to the World's Top Movies of all times, a place where you can look up for worldwide top rated movies!\n\n"
+    puts "\nWelcome to the World's Top Movies of all time, a place where you can look up for worldwide top rated movies!\n\n"
     sleep(1.5)
     username = self.class.prompt.ask("Please enter your username to log in or sign up: ") do |q|
       q.required(true, "Oops, seems you haven't provided your username! Try again please.")
