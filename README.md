@@ -1,6 +1,6 @@
 # WorldTopMovies
 
-Welcome to the world_top_movie gem. Here you can look up for the highest rated movies of all time. 
+Welcome to the world_top_movies gem. Here you can look up for the highest rated movies of all time. 
 
 ## Installation
 
